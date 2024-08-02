@@ -2,7 +2,7 @@
   --blue: #009ddc;
   --white: hsl(0deg, 0%, 95%);
   --lightgrey: hsl(0deg, 0%, 90%);
-  --black: hsl(0deg, 0%, 10%);
+  --black: hsl(0, 0%, 10%);
   --darkgrey: hsl(0deg, 0%, 20%);
   --mediumgrey: hsl(0deg, 0%, 40%);
 
@@ -17,8 +17,19 @@ html, body {
   padding: 0;
   background: var(--background);
   color: var(--text);
+  height: 100%;
+  width: 100%;
+}
+
+html, body, dialog, a {
   font-family: sans-serif;
   font-weight: lighter;
+  color: var(--text);
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 header, h1 {
@@ -28,7 +39,7 @@ header, h1 {
 header {
   padding: 20px;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto;
   gap: 20px
 }
 
@@ -36,12 +47,12 @@ header {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;
+  column-gap: 5px;
 }
 
 #icon {
   grid-column: 1;
   grid-row: 1 / 3;
-  padding: 5px;
   font-size: 24px;
 }
 
@@ -54,20 +65,55 @@ header {
   align-self: end;
 }
 
-#location {
+#slogan {
   grid-column: 2;
   grid-row: 2;
   font-size: 10px;
 }
 
-#mail {
+#menu {
   grid-column: 3;
-  width: 28px;
-  height: 28px;
 }
 
-#call {
-  grid-column: 4;
-  width: 28px;
-  height: 28px;
+#lamps {
+  font-family: cursive;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+address {
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+address a {
+  display: grid;
+  align-items: center;
+  grid-template-rows: auto;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
+dialog {
+  background: var(--background);
+}
+
+#dialogContent {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+dialog p {
+  max-height: calc(100vh - 200px);
+  max-width: calc(100vw - 100px);
+  overflow: auto;
+}
+
+::backdrop {
+  background: black;
+  opacity: 0.75;
 }

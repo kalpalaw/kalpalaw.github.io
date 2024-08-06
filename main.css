@@ -1,12 +1,13 @@
 :root {
   --blue: #009ddc;
-  --white: hsl(0deg, 0%, 95%);
+  --white: hsl(0, 0%, 95%);
   --lightgrey: hsl(0deg, 0%, 90%);
   --black: hsl(0, 0%, 10%);
+  --maroon: #40101b;
   --darkgrey: hsl(0deg, 0%, 20%);
   --mediumgrey: hsl(0deg, 0%, 40%);
 
-  --background: var(--black);
+  --background: var(--maroon);
   --background-secondary: var(--darkgrey);
   --header: var(--darkgrey);
   --text: var(--white);

@@ -7,10 +7,11 @@
   --darkgrey: hsl(0deg, 0%, 20%);
   --mediumgrey: hsl(0deg, 0%, 40%);
 
-  --background: var(--maroon);
+  --background: var(--white);
   --background-secondary: var(--darkgrey);
+  --accent: var(--maroon);
   --header: var(--darkgrey);
-  --text: var(--white);
+  --text: var(--black);
 }
 
 html, body {
@@ -29,8 +30,9 @@ html, body, dialog, a {
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 header, h1 {
@@ -38,7 +40,6 @@ header, h1 {
 }
 
 header {
-  padding: 20px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 20px
@@ -77,16 +78,46 @@ header {
 }
 
 #lamps {
-  font-family: cursive;
-  font-size: 24px;
-  text-align: center;
-  padding: 20px;
-  font-style: italic;
-  font-weight: bold;
+  display:flex;
+  --s: 100px;
+  --m: 4px;
+  --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+}
+
+#container {
+  font-size: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#container hover-card {
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s)*1.1547);
+  display: inline-block;
+  font-size:initial;
+  margin-bottom: calc(var(--m) - var(--s)*0.2885);
+}
+
+#container::before {
+  content: "";
+  width: calc(var(--s)/2 + var(--m));
+  float: left;
+  height: 120%;
+  shape-outside: repeating-linear-gradient(
+                   #0000 0 calc(var(--f) - 3px),
+                   #000  0 var(--f));
+}
+
+#practiceAreas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 address {
-  padding: 20px;
   display: grid;
   gap: 10px;
 }
@@ -106,15 +137,23 @@ dialog {
 #dialogContent {
   display: grid;
   grid-template-rows: 1fr auto;
+  justify-items: center;
 }
 
 dialog p {
   max-height: calc(100vh - 200px);
-  max-width: calc(100vw - 100px);
+  width: calc(100vw - 100px);
+  max-width: 800px;
   overflow: auto;
 }
 
 ::backdrop {
   background: black;
   opacity: 0.75;
+}
+
+section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }

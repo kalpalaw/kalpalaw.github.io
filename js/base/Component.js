@@ -4,7 +4,7 @@ class Component extends LitElement {
   static get styles() {
     return css`
       :host {
-        font-family: sans-serif;
+        font-family: var(--font);
         font-weight: lighter;
       }
     `;

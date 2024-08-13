@@ -9,6 +9,8 @@
   --darkgrey: hsl(0deg, 0%, 20%);
   --mediumgrey: hsl(0deg, 0%, 40%);
 
+  --font: "Roboto", sans-serif;
+
   --background: var(--white);
   --background-secondary: var(--darkgrey);
   --accent: var(--maroon);
@@ -25,147 +27,10 @@ html, body {
   width: 100%;
 }
 
-html, body, dialog, a {
-  font-family: "Roboto", sans-serif;
+html, body, dialog {
+  font-family: var(--font);
   font-weight: lighter;
   color: var(--text);
-}
-
-body {
-  display: grid;
-  gap: 10px;
-  grid-template-rows: auto 1fr;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-main {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-header, h1 {
-  margin: 0;
-}
-
-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 20px;
-  padding: 20px;
-}
-
-#logo {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
-  column-gap: 5px;
-}
-
-#icon {
-  grid-column: 1;
-  grid-row: 1 / 3;
-  font-size: 24px;
-}
-
-#title {
-  grid-column: 2;
-  grid-row: 1;
-  font-size: 24px;
-  letter-spacing: 2px;
-  word-spacing: 5px;
-  align-self: end;
-}
-
-#slogan {
-  grid-column: 2;
-  grid-row: 2;
-  font-size: 10px;
-}
-
-#menu {
-  grid-column: 3;
-}
-
-#lamps {
-  container-type: inline-size;
-  position: relative;
-  width: 100%;
-  width: 362px;
-  height: 302px;
-}
-
-#lamps hover-card {
-  position: absolute;
-}
-
-#lamps hover-card {
-  --s: 120px;
-  --gap: 1px;
-  width: var(--s);
-  height: var(--s);
-}
-
-#lamps hover-card:nth-child(1) {
-  top: 0;
-  left: calc(var(--s)/2);;
-}
-
-#lamps hover-card:nth-child(2) {
-  top: 0;
-  left: calc(1.5 * var(--s) + var(--gap));
-}
-
-#lamps hover-card:nth-child(3) {
-  top: calc(0.75 * var(--s) + var(--gap));
-  left: 0;
-}
-
-#lamps hover-card:nth-child(4) {
-  top: calc(0.75 * var(--s) + var(--gap));
-  left: 121px;
-}
-
-#lamps hover-card:nth-child(5) {
-  top: calc(0.75 * var(--s) + var(--gap));
-  left: calc(2 * (var(--s) + var(--gap)));
-}
-
-#lamps hover-card:nth-child(6) {
-  top: calc(1.5 * var(--s) + 2 * var(--gap));
-  left: calc(var(--s)/2);;
-}
-
-#lamps hover-card:nth-child(7) {
-  top: calc(1.5 * var(--s) + 2 * var(--gap));
-  left: calc(1.5 * var(--s) + var(--gap));
-}
-
-
-#practiceAreas {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr) ) ;
-  gap: 10px;
-  width: 100%;
-}
-
-#practiceAreas hover-card {
-  --accent: var(--white);
-  color: var(--maroon);
-}
-
-address {
-  display: grid;
-  gap: 10px;
-}
-
-address a {
-  display: grid;
-  align-items: center;
-  grid-template-rows: auto;
-  grid-template-columns: auto 1fr;
-  gap: 10px;
 }
 
 dialog {
@@ -188,26 +53,4 @@ dialog p {
 ::backdrop {
   background: black;
   opacity: 0.75;
-}
-
-section {
-  width: 100%;
-  margin: 0 auto;
-  height: 100%;
-  scroll-snap-align: start;
-  display: grid;
-  place-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-section div {
-  width: 100%;
-  max-width: 800px;
-  display: grid;
-}
-
-section:nth-child(odd) {
-  background: var(--maroon);
-  color: white;
 }

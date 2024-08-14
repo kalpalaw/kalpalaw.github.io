@@ -5,6 +5,7 @@ export default class PageSection extends Component {
   static get properties() {
     return {
       text: { type: String },
+      showHeading: { type: Boolean, reflect: true }
     };
   }
 
@@ -21,6 +22,7 @@ export default class PageSection extends Component {
           place-items: center;
           padding: 20px;
           box-sizing: border-box;
+          container-type: inline-size;
         }
 
         div {
@@ -32,6 +34,14 @@ export default class PageSection extends Component {
         :host(:nth-child(odd)) {
           background: var(--maroon);
           color: white;
+        }
+
+        h2 {
+          display: none;
+        }
+
+        :host([showHeading]) h2 {
+          display: block;
         }
       `,
     ];

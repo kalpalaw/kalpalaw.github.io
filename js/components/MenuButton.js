@@ -18,7 +18,7 @@ export default class MenuButton extends Component {
           position: relative;
           transition: .5s ease-in-out;
           cursor: pointer;
-          transform: scale(0.7);
+          transform: scale(0.6);
         }
 
         div {

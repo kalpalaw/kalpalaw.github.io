@@ -19,6 +19,7 @@ export default class NavMenu extends Component {
           background: var(--white);
           cursor: pointer;
           padding: 20px;
+          font-size: 24px;
           z-index: 1;
         }
 
@@ -28,7 +29,15 @@ export default class NavMenu extends Component {
 
         #items {
           display: grid;
-          gap: 20px;
+        }
+
+        #items div {
+          padding: 10px;
+        }
+
+        #items div:hover {
+          color: var(--white);
+          background: var(--maroon);
         }
       `,
     ];

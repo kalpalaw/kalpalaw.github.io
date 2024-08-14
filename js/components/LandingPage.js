@@ -173,7 +173,6 @@ export default class LandingPage extends Component {
 
         #aboutUs {
           font-size: 24px;
-          text-align: center;
         }
       `,
     ];
@@ -200,7 +199,11 @@ export default class LandingPage extends Component {
       </header>
       <main>
         <page-section text="About Us">
-          <p id="aboutUs">We at Kalpa law are committed to excellence and are driven by client satisfaction. Our team of seasoned legal experts possess a proven track record in diverse legal fields, with a sharp focus on delivering swift and effective solutions. Our firm embodies the core values of integrity, transparency, and dedication, striving to exceed expectations in every case.</p>
+          <div id="aboutUs">
+            <p>We at <b>Kalpa Law</b> are committed to excellence and are driven by client satisfaction.</p>
+            <p>Our team of seasoned legal experts possess a proven track record in diverse legal fields, with a sharp focus on delivering swift and effective solutions.</p>
+            <p>Our firm embodies the core values of integrity, transparency, and dedication, striving to exceed expectations in every case.</p>
+          </div>
         </page-section>
         <page-section showHeading text="Why Choose Us">
           <div id="lamps">

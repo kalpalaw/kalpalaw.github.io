@@ -173,6 +173,7 @@ export default class LandingPage extends Component {
 
         #aboutUs {
           font-size: 24px;
+          font-weight: lighter;
         }
       `,
     ];

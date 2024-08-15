@@ -54,7 +54,7 @@ export default class HoverCard extends Component {
 
         .face2 {
           transition: 0.5s;
-          font-size: 16px;
+          font-size: 24px;
           background: var(--accent);
           border-radius: 15px;
           box-sizing: border-box;

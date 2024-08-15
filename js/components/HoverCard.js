@@ -30,6 +30,10 @@ export default class HoverCard extends Component {
           clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
         }
 
+        :host([shape="hexagon"]) .face2 {
+          font-size: 12px;
+        }
+
         .face {
           position: absolute;
           top: 0;
@@ -50,6 +54,7 @@ export default class HoverCard extends Component {
 
         .face2 {
           transition: 0.5s;
+          font-size: 16px;
           background: var(--accent);
           border-radius: 15px;
           box-sizing: border-box;

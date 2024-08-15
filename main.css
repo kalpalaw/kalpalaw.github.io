@@ -2,7 +2,7 @@
 
 :root {
   --blue: #009ddc;
-  --white: hsl(0, 0%, 95%);
+  --white: #d9cfd1;
   --lightgrey: hsl(0deg, 0%, 90%);
   --black: hsl(0, 0%, 10%);
   --maroon: #40101b;
@@ -29,7 +29,6 @@ html, body {
 
 html, body, dialog {
   font-family: var(--font);
-  font-weight: lighter;
   color: var(--text);
 }
 

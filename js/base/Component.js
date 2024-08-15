@@ -5,7 +5,6 @@ class Component extends LitElement {
     return css`
       :host {
         font-family: var(--font);
-        font-weight: lighter;
       }
     `;
   }

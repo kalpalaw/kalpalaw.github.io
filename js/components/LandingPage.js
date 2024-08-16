@@ -206,6 +206,9 @@ export default class LandingPage extends Component {
             <p>Our firm embodies the core values of integrity, transparency, and dedication, striving to exceed expectations in every case.</p>
           </div>
         </page-section>
+        <!-- <page-section text="Quotes">
+          <scroll-carousel .items=${["The law is reason free from passion.", "The law cannot make all men equal, but they are all equal before the law.", "The law is reason, that which is not reason is not law.", "The only thing more expensive than hiring a lawyer is not hiring a lawyer.", "A lawyer’s time and advice are his stock in trade.", "Questions inspire Curiosity"]}></scroll-carousel>
+        </page-section> -->
         <page-section showHeading text="Why Choose Us">
           <div id="lamps">
             <hover-card shape="hexagon" text="Honesty" description="Truthful & transparent with clients and the law"></hover-card>

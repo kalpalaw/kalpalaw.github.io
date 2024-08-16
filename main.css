@@ -2,7 +2,7 @@
 
 :root {
   --blue: #009ddc;
-  --white: #d9cfd1;
+  --white: hsl(0, 0%, 95%);
   --lightgrey: hsl(0deg, 0%, 90%);
   --black: hsl(0, 0%, 10%);
   --maroon: #40101b;

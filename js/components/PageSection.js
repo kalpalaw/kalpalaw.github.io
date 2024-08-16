@@ -33,7 +33,12 @@ export default class PageSection extends Component {
 
         :host(:nth-child(odd)) {
           background: var(--maroon);
-          color: white;
+          color: var(--white);
+        }
+
+        :host(:nth-last-child(1)) {
+          background: var(--white);
+          color: var(--maroon);
         }
 
         h2 {

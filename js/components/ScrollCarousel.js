@@ -13,25 +13,51 @@ export default class ScrollCarousel extends Component {
       super.styles,
       css`
         :host {
-          display: grid;
-          grid-auto-flow: column;
-          grid-template-columns: 400px;
-          grid-auto-columns: 400px;
+          display: block;
           overflow: auto;
           scroll-snap-type: x mandatory;
-          width: 400px;
+          font-size: 36px;
+          white-space: nowrap;
+          scroll-behavior: smooth;
         }
 
         div {
+          display: inline-block;
           scroll-snap-align: start;
+          width: 100%;
+          white-space: normal;
+          vertical-align: top;
+          padding: 10px;
+          box-sizing: border-box;
+        }
+
+        p {
+          font-size: 24px;
         }
       `,
     ];
   }
 
+  play() {
+    let i = 0;
+    let items = this.shadowRoot.querySelectorAll('div');
+    this._interval = setInterval(() => {
+      items[i].scrollIntoView({ smooth: true });
+      if (i === (items.length - 1)) {
+        i = 0;
+      } else {
+        i += 1;
+      }
+    }, 5000);
+  }
+
+  pause() {
+    clearInterval(this._interval);
+  }
+
   render() {
     return html`
-      ${this.items.map((item) => html`<div>${item}</div>`)}
+      ${this.items.map((item) => html`<div><q>${item.split('-')[0]}</q><p>—${item.split('-')[1]}</div>`)}
     `;
   }
 }

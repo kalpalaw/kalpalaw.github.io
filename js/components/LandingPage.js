@@ -47,13 +47,14 @@ export default class LandingPage extends Component {
           display: grid;
           grid-template-rows: auto auto;
           grid-template-columns: auto auto;
-          column-gap: 5px;
+          column-gap: 10px;
         }
 
         #icon {
           grid-column: 1;
           grid-row: 1 / 3;
-          font-size: 24px;
+          width: 50px;
+          height: 50px;
         }
 
         #title {
@@ -213,7 +214,7 @@ export default class LandingPage extends Component {
     return html`
       <header>
         <div id="logo">
-          <img id="icon" src="images/gavel.svg">
+          <img id="icon" src="images/logo.svg">
           <div id="title">KALPA LAW</div>
           <div id="slogan">Advocates & Advisors</div>
         </div>

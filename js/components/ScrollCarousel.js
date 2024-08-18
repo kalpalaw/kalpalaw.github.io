@@ -42,7 +42,7 @@ export default class ScrollCarousel extends Component {
     let i = 1;
     let items = this.shadowRoot.querySelectorAll('div');
     this._interval = setInterval(() => {
-      items[i].scrollIntoView({ smooth: true });
+      items[i].scrollIntoView();
       if (i === (items.length - 1)) {
         i = 0;
       } else {

@@ -146,7 +146,7 @@ export default class LandingPage extends Component {
 
         #practiceAreas {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr) ) ;
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
           gap: 10px;
           width: 100%;
         }
@@ -160,6 +160,37 @@ export default class LandingPage extends Component {
           display: grid;
           font-size: 22px;
           gap: 20px;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        #news {
+          display: grid;
+          grid-auto-columns: 200px;
+          width: 100%;
+          gap: 20px;
+          overflow: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+        }
+
+        #news a {
+          display: grid;
+          background: var(--white);
+          color: var(--maroon);
+          padding: 20px;
+          scroll-snap-align: start;
+          grid-row: 1;
+          grid-template-rows: 1fr auto;
+          gap: 20px;
+        }
+
+        #news a .date {
+          font-size: 11px;
+          font-style: italic;
         }
 
         address a {
@@ -186,7 +217,11 @@ export default class LandingPage extends Component {
 
   _handleMenuNavigate(e) {
     this.isMenuOpen = false;
-    this.shadowRoot.querySelector(`[text="${e.detail.item}"]`).scrollIntoView({ smooth: true });
+    this.shadowRoot.querySelector(`[text="${e.detail.item}"]`).scrollIntoView();
+  }
+
+  _handleLogoClick() {
+    this.shadowRoot.querySelector(`[text="About Us"]`).scrollIntoView();
   }
 
   firstUpdated() {
@@ -213,7 +248,7 @@ export default class LandingPage extends Component {
   render() {
     return html`
       <header>
-        <div id="logo">
+        <div id="logo" @click=${this._handleLogoClick}>
           <img id="icon" src="images/logo.svg">
           <div id="title">KALPA LAW</div>
           <div id="slogan">Advocates & Advisors</div>
@@ -249,6 +284,70 @@ export default class LandingPage extends Component {
             <hover-card text="Criminal" description="Economic Offences, White Collar Offences, Cyber offences, IPC/BNS"></hover-card>
           </div>
         </page-section>
+        <page-section showHeading text="In The News">
+          <div id="news">
+            <a target="_blank" href="https://legal.economictimes.indiatimes.com/news/litigation/the-concept-of-aid-and-advice-is-alien-to-the-administration-of-mcd-say-legal-experts/112351663">
+              <div>Supreme Court Judgment on the issue of power of LG to appoint 10 aldermen to MCD, without the aid and advice of elected government</div>
+              <div class="date">August, 2024</div>
+            </a>
+            <a target="_blank" href="https://legal.economictimes.indiatimes.com/news/litigation/the-royalty-payments-under-section-9-of-the-mmdr-act-are-not-taxes-explain-legal-experts/112031771">
+              <div>Landmark Supreme Court 9 Judge Constitution Bench Judgment on the issue of imposition and collection of taxes upon minerals </div>
+              <div class="date">July, 2024</div>
+            </a>
+            <a target="_blank" href="https://legal.economictimes.indiatimes.com/news/law-policy/law-ministry-pitches-for-sunset-clause-fosters-clarity-and-efficiency-within-the-system-says-legal-experts/111909493">
+              <div>On the Decision of Law Ministry to introduce “Sunset Clauses” in legislation</div>
+              <div class="date">July, 2024</div>
+            </a>
+            <a target="_blank" href="https://legal.economictimes.indiatimes.com/news/litigation/the-royalty-payments-under-section-9-of-the-mmdr-act-are-not-taxes-explain-legal-experts/112031771">
+              <div>Landmark Supreme Court 9 Judge Constitution Bench Judgment on the issue of imposition and collection of taxes upon minerals</div>
+              <div class="date">July, 2024</div>
+            </a>
+            <a target="_blank" href="https://legal.economictimes.indiatimes.com/news/law-policy/law-ministry-pitches-for-sunset-clause-fosters-clarity-and-efficiency-within-the-system-says-legal-experts/111909493">
+              <div>On the Decision of Law Ministry to introduce “Sunset Clauses” in legislation</div>
+              <div class="date">June, 2024</div>
+            </a>
+            <a target="_blank" href="https://www.moneycontrol.com/news/india/will-scs-judgement-on-maintenance-for-divorced-muslim-women-be-applicable-on-the-bharatiya-nagarik-suraksha-sanhita-12767115.html">
+              <div>Landmark Supreme Court Judgment on the issue of Muslim Women’s Rights under Section 125 of the CrPC</div>
+              <div class="date">July, 2024</div>
+            </a>
+            <a target="_blank" href="https://www.indiatoday.in/business/story/zerodha-glitch-can-you-sue-online-trading-platforms-over-losses-sebi-mandate-legal-expertise-2564897-2024-07-10">
+              <div>Legal Remedies available against Technology based Trading Platforms for glitches in their applications</div>
+              <div class="date">July, 2024</div>
+            </a>
+            <a target="_blank" href="https://www.moneycontrol.com/news/india/babas-burden-why-the-godman-can-be-asked-to-cough-up-compensation-to-the-families-of-the-121-dead-12762384.html">
+              <div>Liability of the Event Organizers under BNS</div>
+              <div class="date">July, 2024</div>
+            </a>
+            <a target="_blank" href="https://legal.economictimes.indiatimes.com/news/editors-desk/new-criminal-laws-2024-the-new-rules-introduces-the-reformative-approach-through-legislative-enactments/111135920">
+              <div>The impact of the new statute for prevention of use of unfair means in Public Examination, in the age of ever evolving technology</div>
+              <div class="date">June, 2024</div>
+            </a>
+            <a target="_blank" href="https://www.livemint.com/news/india/buddhism-sikhism-jainism-separate-from-hinduism-gujarat-govt-asks-hindus-to-seek-permission-to-convert-11712828900976.html">
+              <div>Legality of Gujarat Government’s circular asking Hindus to seek permission before conversion to Buddhism, Jainism and Sikhism</div>
+              <div class="date">March, 2024</div>
+            </a>
+            <a target="_blank" href="https://www.moneycontrol.com/elections/lok-sabha-election/lok-sabha-elections-2024-denial-of-paid-leave-on-poll-day-punishable-by-law-article-12473441.html">
+              <div>Legal consequences for denying paid leave on poll day</div>
+              <div class="date">March, 2024</div>
+            </a>
+            <a target="_blank" href="https://economictimes.indiatimes.com/wealth/personal-finance-news/toyota-innovas-airbag-failed-to-open-in-an-accident-car-owner-to-get-rs-32-07-lakh-or-a-new-vehicle-orders-ncdrc/articleshow/108382992.cms">
+              <div>Analysis of Judgment of NCDRC on non resolution of a manufacturing defect vis a vis deficiency in service</div>
+              <div class="date">March, 2024</div>
+            </a>
+            <a target="_blank" href="https://economictimes.indiatimes.com/wealth/personal-finance-news/a-stock-broker-was-ordered-by-ncdrc-to-refund-rs-5-67-lakh-lost-in-fo-trading-to-nri-after-13-years-of-long-fight/articleshow/108208891.cms">
+              <div>Liability of brokers under the Consumer Laws</div>
+              <div class="date">March, 2024</div>
+            </a>
+            <a target="_blank" href="https://www.telegraphindia.com/business/electoral-trusts-set-to-thrive-following-supreme-court-judgment-say-observers/cid/2000808">
+              <div>Legal checks on donations through electoral trusts</div>
+              <div class="date">February, 2024</div>
+            </a>
+            <a target="_blank" href="https://legal.economictimes.indiatimes.com/news/litigation/delhi-hc-to-decide-the-inventor-of-butter-chicken-dal-makhni/107263695">
+              <div>Claim of legacy on Intellectual Property Rights</div>
+              <div class="date">January, 2024</div>
+            </a>
+          </div>
+        </page-section>
         <page-section showHeading text="Contact Us">
           <address>
             <a id="call" href="tel:+919891758831"><img src="images/call.svg"> +91-9891758831</a>
@@ -258,7 +357,7 @@ export default class LandingPage extends Component {
           </address>
         </page-section>
       </main>
-      <nav-menu @navigate=${this._handleMenuNavigate} .open=${this.isMenuOpen} .items=${['About Us', 'Why Choose Us', 'Practice Areas', 'Contact Us']}></nav-menu>
+      <nav-menu @navigate=${this._handleMenuNavigate} .open=${this.isMenuOpen} .items=${['About Us', 'Quotes', 'Why Choose Us', 'Practice Areas', 'In The News', 'Contact Us']}></nav-menu>
     `;
   }
 }

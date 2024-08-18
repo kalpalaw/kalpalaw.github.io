@@ -39,7 +39,7 @@ export default class ScrollCarousel extends Component {
   }
 
   play() {
-    let i = 0;
+    let i = 1;
     let items = this.shadowRoot.querySelectorAll('div');
     this._interval = setInterval(() => {
       items[i].scrollIntoView({ smooth: true });
@@ -48,7 +48,7 @@ export default class ScrollCarousel extends Component {
       } else {
         i += 1;
       }
-    }, 5000);
+    }, 3000);
   }
 
   pause() {

@@ -32,7 +32,7 @@ export default class HoverCard extends Component {
           color: var(--maroon);
         }
 
-        :host([shape="hexagon"]) .face2 {
+        :host([shape="hexagon"]) .face {
           font-size: 12px;
           background: var(--white);
           color: var(--maroon);
@@ -47,11 +47,13 @@ export default class HoverCard extends Component {
           display: flex;
           justify-content: center;
           align-items: center;
+          background: var(--maroon);
+          color: var(--white);
         }
 
         .face1 {
           box-sizing: border-box;
-          font-size: 11px;
+          font-size: 12px;
           padding: 10px;
           padding-top: 30px;
         }
@@ -60,8 +62,8 @@ export default class HoverCard extends Component {
           transition: 0.5s;
           font-size: 24px;
           border-radius: 15px;
+          font-weight: bold;
           box-sizing: border-box;
-          color: var(--white);
           div {
             transition: 0.5s;
           }

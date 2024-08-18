@@ -48,7 +48,7 @@ export default class ScrollCarousel extends Component {
       } else {
         i += 1;
       }
-    }, 3000);
+    }, 4000);
   }
 
   pause() {

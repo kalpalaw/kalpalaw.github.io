@@ -169,12 +169,13 @@ export default class LandingPage extends Component {
 
         #news {
           display: grid;
-          grid-auto-columns: 200px;
+          grid-auto-columns: 250px;
           width: 100%;
           gap: 20px;
           overflow: auto;
           scroll-snap-type: x mandatory;
           scroll-behavior: smooth;
+          font-size: 24px;
         }
 
         #news a {
@@ -189,7 +190,7 @@ export default class LandingPage extends Component {
         }
 
         #news a .date {
-          font-size: 11px;
+          font-size: 14px;
           font-style: italic;
         }
 

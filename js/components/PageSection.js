@@ -43,6 +43,8 @@ export default class PageSection extends Component {
 
         h2 {
           display: none;
+          font-size: 40px;
+          font-weight: normal;
         }
 
         :host([showHeading]) h2 {

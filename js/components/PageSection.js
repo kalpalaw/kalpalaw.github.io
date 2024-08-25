@@ -37,11 +37,6 @@ export default class PageSection extends Component {
           color: var(--white);
         }
 
-        :host(:nth-last-child(1)) {
-          background: var(--white);
-          color: var(--maroon);
-        }
-
         h2 {
           display: none;
           font-size: 40px;

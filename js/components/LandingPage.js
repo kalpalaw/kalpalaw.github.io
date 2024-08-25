@@ -357,8 +357,15 @@ export default class LandingPage extends Component {
             <a href="https://www.google.com/maps/place/28%C2%B033'34.6%22N+77%C2%B014'33.0%22E/@28.5596141,77.2418576,19z/data=!3m1!4b1!4m7!1m2!10m1!1e2!3m3!8m2!3d28.5596129!4d77.2425013?entry=ttu"><img src="images/location.svg">E-141, 1st Floor<br>Amar Colony<br>New Delhi – 110024</a>
           </address>
         </page-section>
+        <page-section showHeading text="About Us">
+          <div id="aboutUs">
+            <p>The word <b>“Kalpa”</b>, takes its origins from Sanskrit language and signifies a cosmic cycle – an immense period of time stretching from creation to dissolution. Just as a <b>“Kalpa”</b> encompasses the entirety of existence, we at Kalpa Law support our client throughout their legal battle – from the beginning till the end, with effective legal strategies and solutions, tailored to meet the unique needs of individuals and businesses alike.</p>
+            <p><b>Kalpa Law</b> is a full-service law firm, offering a diverse spectrum of legal expertise with comprehensive solutions under one roof. Our team of seasoned legal experts are committed to delivering unparalleled legal counsel and representation.</p>
+            <p>We believe in building enduring relationships, founded on trust, transparency, and a deep commitment to succeed. Our client-centric approach ensures that your needs and goals are our top priority. With a keen understanding of the importance of deadlines, we are equipped to provide result oriented legal solutions within tight timeframes, ensuring that your interests are protected at every turn.</p>
+          </div>
+        </page-section>
       </main>
-      <nav-menu @navigate=${this._handleMenuNavigate} .open=${this.isMenuOpen} .items=${['Intro', 'Quotes', 'Why Choose Us', 'Practice Areas', 'In The News', 'Contact Us']}></nav-menu>
+      <nav-menu @navigate=${this._handleMenuNavigate} .open=${this.isMenuOpen} .items=${['Intro', 'Quotes', 'Why Choose Us', 'Practice Areas', 'In The News', 'Contact Us', 'About Us']}></nav-menu>
     `;
   }
 }

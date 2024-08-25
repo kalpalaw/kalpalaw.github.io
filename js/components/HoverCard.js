@@ -23,7 +23,7 @@ export default class HoverCard extends Component {
           box-sizing: border-box;
           aspect-ratio: 1;
           text-align: center;
-          max-width: 200px;
+          max-width: 150px;
         }
 
         :host([shape="hexagon"]) {

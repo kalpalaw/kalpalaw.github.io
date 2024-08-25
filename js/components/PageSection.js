@@ -23,6 +23,7 @@ export default class PageSection extends Component {
           padding: 20px;
           box-sizing: border-box;
           container-type: inline-size;
+          overflow: auto;
         }
 
         div {

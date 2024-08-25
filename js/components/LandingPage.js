@@ -205,7 +205,7 @@ export default class LandingPage extends Component {
         }
 
         #aboutUs {
-          font-size: 24px;
+          font-size: 20px;
           font-weight: lighter;
         }
       `,
@@ -259,9 +259,9 @@ export default class LandingPage extends Component {
       <main>
         <page-section text="About Us">
           <div id="aboutUs">
-            <p>We at <b>Kalpa Law</b> are committed to excellence and are driven by client satisfaction.</p>
-            <p>Our team of seasoned legal experts possess a proven track record in diverse legal fields, with a sharp focus on delivering swift and effective solutions.</p>
-            <p>Our firm embodies the core values of integrity, transparency, and dedication, striving to exceed expectations in every case.</p>
+            <p>The word <b>“Kalpa”</b>, takes its origins from Sanskrit language and signifies a cosmic cycle – an immense period of time stretching from creation to dissolution. Just as a <b>“Kalpa”</b> encompasses the entirety of existence, we at Kalpa Law support our client throughout their legal battle – from the beginning till the end, with effective legal strategies and solutions, tailored to meet the unique needs of individuals and businesses alike.</p>
+            <p><b>Kalpa Law</b> is a full-service law firm, offering a diverse spectrum of legal expertise with comprehensive solutions under one roof. Our team of seasoned legal experts are committed to delivering unparalleled legal counsel and representation.</p>
+            <p>We believe in building enduring relationships, founded on trust, transparency, and a deep commitment to succeed. Our client-centric approach ensures that your needs and goals are our top priority. With a keen understanding of the importance of deadlines, we are equipped to provide result oriented legal solutions within tight timeframes, ensuring that your interests are protected at every turn.</p>
           </div>
         </page-section>
         <page-section text="Quotes">

@@ -18,35 +18,35 @@
      does not check these.
   4. Blocks marked OPTIONAL can be deleted.
 -->
-<title>Satya Niketan PG Collapse PIL: unofficial information page</title>
-<meta name="description" content="The Public Interest Litigation before the Delhi High Court after the Satya Niketan PG hostel collapse: what the Court has directed so far, and a form to record your view. Unofficial page, not run by or connected with the Court.">
+<title>Satya Niketan PG Collapse PIL: share your feedback</title>
+<meta name="description" content="Share your feedback on the Public Interest Litigation W.P.(CRL) 2752/2026 before the Delhi High Court, filed after the Satya Niketan PG hostel collapse. Unofficial page hosted by Kalpa Law, not run by or connected with the Court.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Satya Niketan PG Collapse PIL: unofficial information page">
-<meta property="og:description" content="What the Delhi High Court has directed so far on student housing and PG hostel safety, and a form to record your view. Unofficial page, not run by or connected with the Court.">
-<meta name="theme-color" content="#f6f1e6">
+<meta property="og:title" content="Satya Niketan PG Collapse PIL: share your feedback">
+<meta property="og:description" content="Share your feedback on the Public Interest Litigation W.P.(CRL) 2752/2026 before the Delhi High Court, filed after the Satya Niketan PG hostel collapse. Unofficial page hosted by Kalpa Law, not run by or connected with the Court.">
+<meta name="theme-color" content="#f2f2f2">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://docs.google.com; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
 
 <style>
   :root {
-    --paper: #f6f1e6;
-    --paper-2: #eee5d3;
-    --card: #fcf9f2;
-    --ink: #1c1a16;
-    --ink-2: #48433a;
-    --ink-3: #686154;
-    --rule: #d8ccb6;
-    --tape: #a3262c;
-    --tape-deep: #7a1a1f;
+    --paper: #f2f2f2;       /* kalpalaw.in --white */
+    --paper-2: #e6e6e6;     /* kalpalaw.in --lightgrey */
+    --card: #ffffff;
+    --ink: #40101b;         /* kalpalaw.in --maroon: its text colour */
+    --ink-2: #333333;       /* kalpalaw.in --darkgrey */
+    --ink-3: #666666;       /* kalpalaw.in --mediumgrey */
+    --rule: #d9d9d9;
+    --tape: #40101b;        /* accent = kalpalaw.in --maroon */
+    --tape-deep: #2a0a11;
     --todo: #ffe477;
 
-    --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-    --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    --serif: "Roboto", system-ui, sans-serif;
+    --sans: "Roboto", system-ui, sans-serif;
+    --mono: "Roboto", system-ui, sans-serif;
 
     /* Height of the embedded Google Form. Raise it if the form scrolls inside its own box.
        Measured 2026-09-30 for the kalpalaw.in form (red theme, 5-point description, case links)
@@ -116,8 +116,8 @@
     transition: transform .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
   }
   .btn:hover { transform: translateY(-1px); color: var(--ink); text-decoration: none; }
-  .btn-primary { background: var(--tape); border-color: var(--tape); color: #fff8f0; }
-  .btn-primary:hover { background: var(--tape-deep); border-color: var(--tape-deep); color: #fff8f0; }
+  .btn-primary { background: var(--tape); border-color: var(--tape); color: #f2f2f2; }
+  .btn-primary:hover { background: var(--tape-deep); border-color: var(--tape-deep); color: #f2f2f2; }
   .btn-ghost:hover { background: var(--ink); color: var(--paper); }
   .btn-sm { padding: .62rem .95rem; font-size: .85rem; }
   .btn .arrow { transition: transform .15s ease; }
@@ -152,27 +152,27 @@
   .status { list-style: none; margin: 0; padding: 1.1rem 0 0; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: .6rem 2rem; font: .92rem/1.4 var(--sans); }
   .status li { display: flex; align-items: baseline; gap: .5rem; }
   .status .mono-label { color: var(--ink-3); }
-  .pulse { width: .5rem; height: .5rem; border-radius: 50%; background: var(--tape); display: inline-block; align-self: center; box-shadow: 0 0 0 4px rgba(163, 38, 44, .14); }
+  .pulse { width: .5rem; height: .5rem; border-radius: 50%; background: var(--tape); display: inline-block; align-self: center; box-shadow: 0 0 0 4px rgba(64, 16, 27, .14); }
 
   /* The cause title, set like the first page of an Indian writ petition. */
   .doc-stack { position: relative; isolation: isolate; margin: 0 .5rem 0 0; }
   .doc-stack::before {
     content: ""; position: absolute; inset: 0; z-index: -1;
-    background: #f3ecde; transform: translate(10px, 10px) rotate(1.1deg);
-    box-shadow: 0 14px 30px -18px rgba(60, 40, 10, .45);
+    background: #e6e6e6; transform: translate(10px, 10px) rotate(1.1deg);
+    box-shadow: 0 14px 30px -18px rgba(0, 0, 0, .3);
   }
   .doc {
     position: relative; background: var(--card);
     padding: clamp(2rem, 4vw, 2.75rem) clamp(1.4rem, 3vw, 2.25rem) 2rem 3.9rem;
-    box-shadow: 0 1px 0 var(--rule), 0 24px 50px -24px rgba(60, 40, 10, .45), 0 2px 6px rgba(60, 40, 10, .07);
+    box-shadow: 0 1px 0 var(--rule), 0 24px 50px -24px rgba(0, 0, 0, .3), 0 2px 6px rgba(0, 0, 0, .06);
   }
-  .doc::before { content: ""; position: absolute; top: 0; bottom: 0; left: 2.85rem; width: 1px; background: rgba(163, 38, 44, .4); }
+  .doc::before { content: ""; position: absolute; top: 0; bottom: 0; left: 2.85rem; width: 1px; background: rgba(64, 16, 27, .4); }
   .tape {
     position: absolute; z-index: 2; left: 1.05rem; top: -16px; bottom: -16px; width: 15px;
     background:
       repeating-linear-gradient(90deg, rgba(255, 255, 255, .07) 0 1px, transparent 1px 3px),
       linear-gradient(90deg, var(--tape-deep), var(--tape) 40%, var(--tape) 60%, var(--tape-deep));
-    box-shadow: 0 2px 5px rgba(80, 10, 10, .3);
+    box-shadow: 0 2px 5px rgba(64, 16, 27, .3);
     transform-origin: top;
   }
   .doc p { margin: 0; }
@@ -200,7 +200,7 @@
     .sec-grid { grid-template-columns: 1fr; }
     .sec-label { position: static; flex-direction: row; gap: .8rem; }
   }
-  .sec h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.1; margin: 0 0 1.4rem; }
+  .sec h2, .sec h1 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.1; margin: 0 0 1.4rem; }
   .sec-intro { font-size: 1.2rem; color: var(--ink-2); max-width: 58ch; margin: 0 0 2rem; }
   .prose { max-width: 66ch; }
   .prose p { margin: 0 0 1.15rem; }
@@ -230,7 +230,7 @@
   .form-frame {
     position: relative; max-width: 780px; min-height: 16rem;
     background: var(--card); padding: .4rem;
-    box-shadow: 0 1px 0 var(--rule), 0 22px 44px -26px rgba(60, 40, 10, .45);
+    box-shadow: 0 1px 0 var(--rule), 0 22px 44px -26px rgba(0, 0, 0, .3);
   }
   .form-frame iframe { display: block; width: 100%; height: var(--form-height); border: 0; opacity: 0; transition: opacity .4s ease; }
   .form-frame.loaded iframe { opacity: 1; }
@@ -251,32 +251,18 @@
   .consent-note .mono-label { color: var(--ink); margin-bottom: .45rem; }
 
   /* Footer ------------------------------------------------------------- */
-  .site-foot { background: var(--ink); color: #e6dfd0; font: .92rem/1.6 var(--sans); }
+  .site-foot { background: var(--ink); color: #f2f2f2; font: .92rem/1.6 var(--sans); }
   .site-foot .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2.5rem; padding-block: 3.5rem 2.5rem; }
-  .site-foot a { color: #f2b8b0; }
-  .site-foot a:hover { color: #ffd6d0; }
+  .site-foot a { color: #ffffff; text-decoration: underline; }
+  .site-foot a:hover { color: #e6e6e6; }
   .site-foot p { margin: 0 0 .8rem; }
-  .site-foot .brand { color: #f6f1e6; margin-bottom: 1rem; }
-  .site-foot .brand-mark { border-color: #f2b8b0; outline-color: #f2b8b0; color: #f2b8b0; }
-  .site-foot .mono-label { color: #b7ae9c; margin: 0 0 .6rem; }
+  .site-foot .brand { color: #f2f2f2; margin-bottom: 1rem; text-decoration: none; }
+  .site-foot .brand-mark { border-color: #f2f2f2; outline-color: #f2f2f2; color: #f2f2f2; }
+  .site-foot .mono-label { color: #cccccc; margin: 0 0 .6rem; }
   .foot-addresses { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .8rem 1.5rem; }
   .foot-addresses address { font-style: normal; }
-  .site-foot .fine { grid-column: 1 / -1; border-top: 1px solid #3a362e; padding-top: 1.25rem; color: #b7ae9c; font-size: .82rem; }
+  .site-foot .fine { grid-column: 1 / -1; border-top: 1px solid rgba(255, 255, 255, .2); padding-top: 1.25rem; color: #cccccc; font-size: .82rem; }
   @media (max-width: 760px) { .site-foot .wrap { grid-template-columns: 1fr; } }
-  @media (max-width: 880px) { .site-foot .wrap { padding-bottom: 6.5rem; } } /* room for the mobile dock */
-
-  /* Mobile "share your feedback" dock ------------------------------------ */
-  .dock {
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
-    padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom));
-    background: rgba(246, 241, 230, .94); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-    border-top: 1px solid var(--rule);
-    transform: translateY(110%); visibility: hidden;
-    transition: transform .25s ease, visibility 0s linear .25s;
-  }
-  .dock.show { transform: none; visibility: visible; transition: transform .25s ease; }
-  .dock .btn { width: 100%; }
-  @media (min-width: 881px) { .dock { display: none; } }
 
   /* Bar Council of India disclaimer, as on the kalpalaw.in homepage */
   .bci {
@@ -284,7 +270,7 @@
     background: var(--card); color: var(--ink);
     border: 1px solid var(--rule); border-top: 4px solid var(--tape);
   }
-  .bci::backdrop { background: var(--ink); }
+  .bci::backdrop { background: rgba(0, 0, 0, .75); }
   .bci .mono-label { margin: 0 0 .8rem; color: var(--tape-deep); }
   .bci p:not(.mono-label) { font: 400 .95rem/1.6 var(--sans); margin: 0 0 1.25rem; max-height: calc(100vh - 220px); overflow: auto; }
 
@@ -317,113 +303,25 @@
   Template: <b>0</b> placeholders left to fill, highlighted in yellow. This bar disappears when all are replaced.
 </div>
 
-<header class="masthead">
+<header class="masthead" id="top">
   <div class="wrap">
     <a class="brand" href="#top">
       <span class="brand-mark" aria-hidden="true">PIL</span>
       <span>Satya Niketan PG Collapse PIL</span>
     </a>
-    <nav aria-label="Sections">
-      <a href="#issue">The issue</a>
-      <a href="#directions">Court's directions</a>
-      <a href="#case">Case details</a>
-      <a class="btn btn-primary btn-sm" href="#respond">Share your feedback</a>
-    </nav>
   </div>
 </header>
 
 <main id="main">
 
-  <section class="hero" id="top" aria-labelledby="hero-h">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow mono-label reveal" style="--i:0">Public Interest Litigation · Before the Hon'ble High Court of Delhi</p>
-        <h1 id="hero-h" class="reveal" style="--i:1">Safe housing for Delhi's students, after the Satya Niketan PG hostel collapse</h1>
-        <p class="lede reveal" style="--i:2">This page summarises the Court's orders in this case so far, and invites your feedback on the PIL. The petition itself is not published here.</p>
-        <div class="actions reveal" style="--i:3">
-          <a class="btn btn-primary" id="hero-cta" href="#respond">Share your feedback <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="#directions">What the Court has directed</a>
-        </div>
-      </div>
-
-      <div class="doc-stack reveal" style="--i:3">
-        <span class="tape" aria-hidden="true"></span>
-        <article class="doc" aria-label="Cause title of the petition">
-          <p class="doc-court">In the High Court of Delhi at New Delhi</p>
-          <p class="doc-no">W.P.(CRL) 2752/2026</p>
-          <p class="doc-matter">In the matter of:</p>
-          <div class="party"><span class="party-name">Aniket Kumar Gupta</span><span class="party-role">…Petitioner</span></div>
-          <p class="versus">Versus</p>
-          <div class="party"><span class="party-name">Govt. of NCT of Delhi &amp; Ors.</span><span class="party-role">…Respondents</span></div>
-          <p class="doc-foot">Public Interest Litigation · CNR No. DLHC010422072026</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="issue" aria-labelledby="issue-h">
-    <div class="wrap sec-grid">
-      <div class="sec-label mono-label"><span class="sec-no">§ 01</span><span>The issue</span></div>
-      <div>
-        <h2 id="issue-h">What this PIL is about</h2>
-        <div class="prose">
-          <p>On 6 September 2026, two buildings in Satya Niketan, Delhi, which were being run as a PG (paying guest) hostel for boys, collapsed. Around 50 students lived there. When the Court first heard this case the next day, at least 7 people had lost their lives. Many residents had been taken to hospital, and many others were believed to be still trapped under the debris.</p>
-          <p>The buildings housed students of colleges affiliated to the University of Delhi on its South Campus, many of whom had come from outside Delhi. In its order of 7 September 2026, the Court noted that the University does not provide enough hostel places for such students, so they and their parents are left to rely on PG hostels.</p>
-          <p>The Court said the incident raises deep concerns about three things: the shortage of hostels run by the University and the Government, the safety and security of students, and the inadequate measures taken by the Municipal Corporation of Delhi (MCD) and other authorities to regulate PG hostels. Its first view (<em>prima facie</em>, meaning before hearing all sides) was that responsibility for such incidents does not lie only with the owner of the PG hostel, but also with the University authorities and with the MCD, which must make sure that buildings follow the building bye-laws. The Court has not decided the case. It has asked the respondents (the government bodies and others the case is brought against) to reply.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="directions" aria-labelledby="directions-h">
-    <div class="wrap sec-grid">
-      <div class="sec-label mono-label"><span class="sec-no">§ 02</span><span>Directions</span></div>
-      <div>
-        <h2 id="directions-h">What the Court has directed so far</h2>
-        <p class="sec-intro">On 7 September 2026, the Court issued notice to the respondents, which means it formally asked them to answer the petition, and gave these directions:</p>
-        <ol class="lettered">
-          <li>Every respondent is to file its own reply to the petition, on affidavit (a written statement sworn to be true), within 10 days, that is, by 17 September 2026.</li>
-          <li>The MCD is to say whether any laws or official rules regulate PG hostels in Delhi.</li>
-          <li>The University of Delhi is to say how many students from outside Delhi take admission in its affiliated colleges, and how many hostels, with their capacities, are run by the University or the Government.</li>
-          <li>The MCD, at its highest executive level, is to hold an inquiry into whether the buildings that collapsed had valid permission. If they were built without it, or against the building bye-laws, the inquiry is to fix responsibility on the officers or employees concerned, and the MCD's reply is to say what action has been proposed against the officers or officials at fault, if there are any.</li>
-          <li>Within a week, that is, by 14 September 2026, the MCD is to inspect all PG hostels in its area and report whether their buildings have the required permissions and follow the bye-laws. Its reply is also to say how many students live in these PG hostels.</li>
-        </ol>
-        <p class="after-facts">The Court also recorded the assurance of the Solicitor General of India (the senior government lawyer appearing for the Union of India, Delhi Police and the MCD) that the rescue operation was in full swing, and said it hoped the authorities would double their efforts so that lives could be saved.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="case" aria-labelledby="case-h">
-    <div class="wrap sec-grid">
-      <div class="sec-label mono-label"><span class="sec-no">§ 03</span><span>Case details</span></div>
-      <div>
-        <h2 id="case-h">Case details</h2>
-        <dl class="facts">
-          <div><dt class="mono-label">Court</dt><dd>High Court of Delhi at New Delhi</dd></div>
-          <div><dt class="mono-label">Case number</dt><dd>W.P.(CRL) 2752/2026: writ petition number 2752 of 2026, filed on the Court's criminal side. It is a writ petition, not a criminal trial.<br><span class="mono-label">CNR No. DLHC010422072026</span></dd></div>
-          <div><dt class="mono-label">Petitioner</dt><dd>Aniket Kumar Gupta</dd></div>
-          <div><dt class="mono-label">Respondents</dt><dd>Govt. of NCT of Delhi and others, including the Municipal Corporation of Delhi (MCD) and the University of Delhi. At the first hearing, the Solicitor General of India appeared for the Union of India (the central government), Delhi Police and the MCD.</dd></div>
-          <div><dt class="mono-label">Bench</dt><dd>Hon'ble the Chief Justice Devendra Kumar Upadhyaya and Hon'ble Mr. Justice Tejas Karia</dd></div>
-          <div><dt class="mono-label">First hearing</dt><dd>7 September 2026. Notice issued to the respondents.</dd></div>
-          <div><dt class="mono-label">Current status</dt><dd>Pending. The respondents' replies were due by 17 September 2026 and the MCD's inspection by 14 September 2026. The orders published here do not say whether these were done. The case was listed for 25 September 2026.</dd></div>
-          <div class="facts-wide"><dt class="mono-label">Orders so far</dt><dd>
-            <a href="order_2026-09-07.pdf" target="_blank" rel="noopener">7 September 2026</a>: notice issued, and the directions above.<br>
-            <a href="order_2026-09-17.pdf" target="_blank" rel="noopener">17 September 2026</a>: the Court took up two applications by Dr. Kiran Bedi seeking to assist the Court, including a request to be made a party to the case. At the request of the Additional Solicitor General, appearing for the Central Government, the Delhi Government and the MCD, it gave 3 days to file objections, and said any response to them may be filed by the next date of hearing. The Court did not decide the applications that day.
-          </dd></div>
-        </dl>
-        <p class="after-facts">Dates can change. For the official, up-to-date status, search the case's CNR number, DLHC010422072026 (the unique number that identifies this case in India's online court records), on the <a href="https://hcservices.ecourts.gov.in/" target="_blank" rel="noopener">eCourts High Court services site</a> or the <a href="https://delhihighcourt.nic.in/" target="_blank" rel="noopener">Delhi High Court website</a>.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- FORM LINK: paste your Google Form link into data-form-url below. -->
   <section class="sec sec-respond" id="respond" aria-labelledby="respond-h"
            data-form-url="https://docs.google.com/forms/d/e/1FAIpQLSdnwm5SWdQh5Tw2vlY1lZdLQPMQA4BAAHEdn4RDeBWGEpsdWQ/viewform">
     <div class="wrap sec-grid">
-      <div class="sec-label mono-label"><span class="sec-no">§ 04</span><span>Respond</span></div>
+      <div class="sec-label mono-label"><span class="sec-no">§ 01</span><span>Respond</span></div>
       <div>
-        <h2 id="respond-h">Share your feedback</h2>
-        <p class="sec-intro">Share your feedback on this PIL. It takes about three minutes.</p>
+        <h1 id="respond-h">Share your feedback</h1>
+        <p class="sec-intro">Share your feedback on the Public Interest Litigation W.P.(CRL) 2752/2026 before the Hon'ble High Court of Delhi, filed after the Satya Niketan PG hostel collapse. It takes about three minutes.</p>
         <p class="not-a-vote">This is not a vote. The Court decides the case on the law and on the material the parties place before it, and it has not asked for public views. Whether any responses are placed before the Court is for the Court to decide.</p>
 
         <div class="before">
@@ -471,15 +369,11 @@
       </section>
     </div>
     <div>
-      <p>This page is not affiliated with, or endorsed by, the Hon'ble High Court of Delhi. It summarises the Court's orders in this case. The matter is pending before the Court, and nothing on this page is intended to prejudge its outcome.</p>
+      <p>This page is not affiliated with, or endorsed by, the Hon'ble High Court of Delhi. The matter is pending before the Court, and nothing on this page is intended to prejudge its outcome.</p>
     </div>
     <p class="fine">Last updated 30 September 2026.</p>
   </div>
 </footer>
-
-<div class="dock" id="dock">
-  <a class="btn btn-primary" href="#respond">Share your feedback <span class="arrow" aria-hidden="true">→</span></a>
-</div>
 
 <script>
 (function () {
@@ -519,19 +413,6 @@
     document.getElementById('form-setup').hidden = false;
   }
 
-  // 3. On phones, show a "Share your feedback" bar once the hero button has
-  //    scrolled away, and hide it while the form itself is on screen.
-  var dock = document.getElementById('dock');
-  var heroCta = document.getElementById('hero-cta');
-  if ('IntersectionObserver' in window) {
-    var visible = { hero: true, form: false };
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { visible[e.target === heroCta ? 'hero' : 'form'] = e.isIntersecting; });
-      dock.classList.toggle('show', !visible.hero && !visible.form);
-    });
-    io.observe(heroCta);
-    io.observe(respond);
-  }
 })();
 </script>
 </body>

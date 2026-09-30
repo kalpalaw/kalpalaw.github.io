@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  PIL information + public feedback page. One file, no build step.
+  Host it anywhere that serves static files (GitHub Pages, Netlify, Cloudflare Pages).
+
+  HOW TO FILL THIS IN
+  1. Every <mark class="todo">[...]</mark> is a placeholder. Replace the whole
+     <mark ...>...</mark>, tags included, with your text. A yellow bar at the
+     top of the page counts how many are left and disappears when none remain.
+  2. Paste your Google Form link into data-form-url (search this file for FORM LINK).
+     Any link that contains /forms/d/e/<id>/ works.
+  3. Edit <title>, description and the og: tags just below. They are what
+     WhatsApp and other apps show when the link is shared. The yellow bar
+     does not check these.
+  4. Blocks marked OPTIONAL can be deleted.
+-->
+<title>Satya Niketan PG Collapse PIL: unofficial information page</title>
+<meta name="description" content="The Public Interest Litigation before the Delhi High Court after the Satya Niketan PG hostel collapse: what the Court has directed so far, and a form to record your view. Unofficial page, not run by or connected with the Court.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Satya Niketan PG Collapse PIL: unofficial information page">
+<meta property="og:description" content="What the Delhi High Court has directed so far on student housing and PG hostel safety, and a form to record your view. Unofficial page, not run by or connected with the Court.">
+<meta name="theme-color" content="#f6f1e6">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://docs.google.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
+
+<style>
+  :root {
+    --paper: #f6f1e6;
+    --paper-2: #eee5d3;
+    --card: #fcf9f2;
+    --ink: #1c1a16;
+    --ink-2: #48433a;
+    --ink-3: #686154;
+    --rule: #d8ccb6;
+    --tape: #a3262c;
+    --tape-deep: #7a1a1f;
+    --todo: #ffe477;
+
+    --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+    /* Height of the embedded Google Form. Raise it if the form scrolls inside its own box.
+       Measured 2026-09-30 for the kalpalaw.in form (red theme, 5-point description, case links)
+       with tests/check_form_fit.py, which also re-checks it: the form's content ends at 4371px
+       on 320px screens, 3930 at 360, 3692 at 390, 3382 at 430, 3074 at 520, 2562 at 768,
+       2748 at 881. Each value below is the narrowest screen in its range plus about 70px. */
+    --form-height: 4440px;
+    --wrap: 1140px;
+    color-scheme: light;
+  }
+  @media (min-width: 360px) { :root { --form-height: 4000px; } }
+  @media (min-width: 390px) { :root { --form-height: 3760px; } }
+  @media (min-width: 430px) { :root { --form-height: 3450px; } }
+  @media (min-width: 520px) { :root { --form-height: 3150px; } }
+  @media (min-width: 640px) { :root { --form-height: 2860px; } }
+  @media (min-width: 768px) { :root { --form-height: 2630px; } }
+  @media (min-width: 881px) { :root { --form-height: 2820px; } }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .12  0 0 0 0 .09  0 0 0 0 .04  0 0 0 .06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+  }
+  img, iframe { max-width: 100%; }
+  a { color: var(--tape); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  a:hover { color: var(--tape-deep); text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -.015em; }
+  strong { font-weight: 600; }
+
+  .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+  .mono-label { font: 500 .74rem/1.35 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+
+  .skip {
+    position: absolute; left: 1rem; top: -4rem; z-index: 100;
+    background: var(--ink); color: var(--paper); padding: .55rem .9rem;
+    font: 500 .9rem var(--sans); border-radius: 3px; text-decoration: none;
+  }
+  .skip:focus { top: 1rem; color: var(--paper); }
+
+  /* Placeholders ------------------------------------------------------- */
+  mark.todo {
+    background: var(--todo); color: var(--ink); padding: 0 .18em; border-radius: 2px;
+    box-shadow: inset 0 -2px 0 #d4a900; font-style: normal;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  }
+  .template-bar {
+    position: sticky; top: 0; z-index: 60;
+    background: var(--todo); border-bottom: 1px solid #d4a900;
+    font: 500 .85rem/1.4 var(--sans); text-align: center; padding: .55rem 1rem;
+  }
+
+  /* Buttons ------------------------------------------------------------ */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    font: 600 .95rem/1 var(--sans); text-decoration: none;
+    padding: .95rem 1.3rem; border-radius: 3px; border: 1.5px solid var(--ink);
+    color: var(--ink); background: transparent;
+    transition: transform .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); color: var(--ink); text-decoration: none; }
+  .btn-primary { background: var(--tape); border-color: var(--tape); color: #fff8f0; }
+  .btn-primary:hover { background: var(--tape-deep); border-color: var(--tape-deep); color: #fff8f0; }
+  .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+  .btn-sm { padding: .62rem .95rem; font-size: .85rem; }
+  .btn .arrow { transition: transform .15s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* Masthead ----------------------------------------------------------- */
+  .masthead { border-bottom: 1px solid var(--rule); }
+  .masthead .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1rem; }
+  .brand { display: flex; align-items: center; gap: .8rem; color: var(--ink); text-decoration: none; font: 600 1rem/1.25 var(--sans); }
+  .brand:hover { color: var(--ink); }
+  .brand-mark {
+    flex: none; display: grid; place-items: center; width: 2.4rem; height: 2.4rem;
+    border: 1.5px solid var(--tape); color: var(--tape); font: 500 .72rem var(--mono); letter-spacing: .08em;
+    outline: 1px solid var(--tape); outline-offset: 2px;
+  }
+  .masthead nav { display: flex; align-items: center; gap: 1.6rem; }
+  .masthead nav a:not(.btn) { color: var(--ink-2); text-decoration: none; font: 500 .88rem var(--sans); }
+  .masthead nav a:not(.btn):hover { color: var(--ink); text-decoration: underline; }
+  @media (max-width: 880px) { .masthead nav a:not(.btn) { display: none; } }
+
+  /* Hero --------------------------------------------------------------- */
+  .hero .wrap {
+    display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center;
+    padding-block: clamp(3rem, 7vw, 6rem) clamp(3.5rem, 8vw, 6.5rem);
+  }
+  @media (max-width: 880px) { .hero .wrap { grid-template-columns: 1fr; } }
+  .eyebrow { color: var(--tape); margin: 0 0 1.4rem; }
+  .hero h1 { font-size: clamp(2.3rem, 5.4vw, 4.2rem); line-height: 1.04; letter-spacing: -.025em; margin: 0 0 1.5rem; }
+  .lede { font-size: clamp(1.15rem, 1.6vw, 1.3rem); color: var(--ink-2); max-width: 38ch; margin: 0 0 2.2rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 2.2rem; }
+  .status { list-style: none; margin: 0; padding: 1.1rem 0 0; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: .6rem 2rem; font: .92rem/1.4 var(--sans); }
+  .status li { display: flex; align-items: baseline; gap: .5rem; }
+  .status .mono-label { color: var(--ink-3); }
+  .pulse { width: .5rem; height: .5rem; border-radius: 50%; background: var(--tape); display: inline-block; align-self: center; box-shadow: 0 0 0 4px rgba(163, 38, 44, .14); }
+
+  /* The cause title, set like the first page of an Indian writ petition. */
+  .doc-stack { position: relative; isolation: isolate; margin: 0 .5rem 0 0; }
+  .doc-stack::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: #f3ecde; transform: translate(10px, 10px) rotate(1.1deg);
+    box-shadow: 0 14px 30px -18px rgba(60, 40, 10, .45);
+  }
+  .doc {
+    position: relative; background: var(--card);
+    padding: clamp(2rem, 4vw, 2.75rem) clamp(1.4rem, 3vw, 2.25rem) 2rem 3.9rem;
+    box-shadow: 0 1px 0 var(--rule), 0 24px 50px -24px rgba(60, 40, 10, .45), 0 2px 6px rgba(60, 40, 10, .07);
+  }
+  .doc::before { content: ""; position: absolute; top: 0; bottom: 0; left: 2.85rem; width: 1px; background: rgba(163, 38, 44, .4); }
+  .tape {
+    position: absolute; z-index: 2; left: 1.05rem; top: -16px; bottom: -16px; width: 15px;
+    background:
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, .07) 0 1px, transparent 1px 3px),
+      linear-gradient(90deg, var(--tape-deep), var(--tape) 40%, var(--tape) 60%, var(--tape-deep));
+    box-shadow: 0 2px 5px rgba(80, 10, 10, .3);
+    transform-origin: top;
+  }
+  .doc p { margin: 0; }
+  .doc-court { text-align: center; font-weight: 600; font-size: .98rem; letter-spacing: .06em; text-transform: uppercase; line-height: 1.45; }
+  .doc-no { text-align: center; font: 500 .82rem/1.5 var(--mono); letter-spacing: .03em; margin-top: .6rem !important; color: var(--ink-2); }
+  .doc-matter { margin-top: 1.9rem !important; font-weight: 600; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: underline; text-underline-offset: .25em; }
+  .party { display: flex; align-items: baseline; gap: .75rem; margin-top: 1.1rem; }
+  .party-name { font-size: 1.12rem; font-weight: 500; line-height: 1.35; }
+  .party::after { content: ""; flex: 1; min-width: 1rem; border-bottom: 1px dotted var(--rule); order: 1; transform: translateY(-.3em); }
+  .party-role { order: 2; flex: none; font-size: .8rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2); }
+  .versus { text-align: center; margin-top: 1.1rem !important; font-weight: 600; font-size: .82rem; letter-spacing: .32em; text-transform: uppercase; color: var(--tape); }
+  .doc-foot { margin-top: 1.9rem !important; padding-top: 1rem; border-top: 1px dashed var(--rule); font-style: italic; font-size: .95rem; color: var(--ink-3); line-height: 1.45; }
+
+  .reveal { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 90ms); }
+  .tape { animation: tie 1.1s cubic-bezier(.65, 0, .25, 1) .55s both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+  @keyframes tie { from { transform: scaleY(0); } }
+
+  /* Sections ----------------------------------------------------------- */
+  .sec { border-top: 1px solid var(--rule); }
+  .sec-grid { display: grid; grid-template-columns: 10.5rem minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); padding-block: clamp(3.5rem, 7vw, 6rem); }
+  .sec-label { position: sticky; top: 3.5rem; align-self: start; display: flex; flex-direction: column; gap: .4rem; color: var(--ink-3); }
+  .sec-no { color: var(--tape); font-size: .86rem; }
+  @media (max-width: 880px) {
+    .sec-grid { grid-template-columns: 1fr; }
+    .sec-label { position: static; flex-direction: row; gap: .8rem; }
+  }
+  .sec h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.1; margin: 0 0 1.4rem; }
+  .sec-intro { font-size: 1.2rem; color: var(--ink-2); max-width: 58ch; margin: 0 0 2rem; }
+  .prose { max-width: 66ch; }
+  .prose p { margin: 0 0 1.15rem; }
+
+  .lettered { list-style: none; counter-reset: item; margin: 0; padding: 0; border-top: 1px solid var(--rule); max-width: 70ch; }
+  .lettered li { counter-increment: item; display: grid; grid-template-columns: 2.9rem minmax(0, 1fr); gap: .75rem; padding: 1.15rem 0; border-bottom: 1px solid var(--rule); }
+  .lettered li::before { content: "(" counter(item, lower-alpha) ")"; font: 500 .95rem/1.9 var(--mono); color: var(--tape); }
+
+  .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; margin: 0; border-top: 1px solid var(--rule); max-width: 820px; }
+  .facts > div { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+  .facts dt { color: var(--ink-3); margin-bottom: .3rem; }
+  .facts dd { margin: 0; font-size: 1.08rem; line-height: 1.45; }
+  .facts > .facts-wide { grid-column: 1 / -1; }
+  @media (max-width: 600px) { .facts { grid-template-columns: 1fr; } }
+  .after-facts { margin: 1.4rem 0 0; font: .95rem/1.5 var(--sans); color: var(--ink-2); }
+
+  /* Respond ------------------------------------------------------------ */
+  .sec-respond { background: var(--paper-2); border-top: 3px solid var(--tape); }
+  .before {
+    max-width: 780px; margin: 0 0 1.75rem; padding: 1.25rem 1.5rem;
+    background: var(--card); border-left: 3px solid var(--tape);
+    font: .98rem/1.55 var(--sans); color: var(--ink-2);
+  }
+  .before h3 { margin: 0 0 .6rem; color: var(--ink); }
+  .before ul { margin: 0; padding-left: 1.1rem; }
+  .before li + li { margin-top: .35rem; }
+  .form-frame {
+    position: relative; max-width: 780px; min-height: 16rem;
+    background: var(--card); padding: .4rem;
+    box-shadow: 0 1px 0 var(--rule), 0 22px 44px -26px rgba(60, 40, 10, .45);
+  }
+  .form-frame iframe { display: block; width: 100%; height: var(--form-height); border: 0; opacity: 0; transition: opacity .4s ease; }
+  .form-frame.loaded iframe { opacity: 1; }
+  .form-loading { position: absolute; top: 3rem; left: 0; right: 0; text-align: center; color: var(--ink-3); }
+  .form-frame.loaded .form-loading, .form-frame.empty .form-loading { display: none; }
+  .form-setup { padding: 2.5rem 2rem; border: 1.5px dashed var(--rule); margin: .4rem; font: .98rem/1.6 var(--sans); color: var(--ink-2); }
+  .form-setup strong { color: var(--ink); }
+  .form-setup code { font: .85rem var(--mono); background: var(--paper-2); padding: .1em .35em; border-radius: 2px; }
+  .unofficial { margin: 1rem 0 0; font: .85rem/1.5 var(--sans); color: var(--ink-3); }
+  .not-a-vote { max-width: 780px; margin: -1rem 0 1.75rem; font: .95rem/1.55 var(--sans); color: var(--ink-2); }
+  .form-fallback { max-width: 780px; margin: 1rem 0 0; font: .95rem/1.5 var(--sans); color: var(--ink-2); }
+
+  .consent-note {
+    max-width: 780px; margin: 2rem 0 0; padding-top: 1.1rem; border-top: 1px solid var(--rule);
+    font: .86rem/1.6 var(--sans); color: var(--ink-2);
+  }
+  .consent-note p { margin: 0; }
+  .consent-note .mono-label { color: var(--ink); margin-bottom: .45rem; }
+
+  /* Footer ------------------------------------------------------------- */
+  .site-foot { background: var(--ink); color: #e6dfd0; font: .92rem/1.6 var(--sans); }
+  .site-foot .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2.5rem; padding-block: 3.5rem 2.5rem; }
+  .site-foot a { color: #f2b8b0; }
+  .site-foot a:hover { color: #ffd6d0; }
+  .site-foot p { margin: 0 0 .8rem; }
+  .site-foot .brand { color: #f6f1e6; margin-bottom: 1rem; }
+  .site-foot .brand-mark { border-color: #f2b8b0; outline-color: #f2b8b0; color: #f2b8b0; }
+  .site-foot .mono-label { color: #b7ae9c; margin: 0 0 .6rem; }
+  .foot-addresses { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .8rem 1.5rem; }
+  .foot-addresses address { font-style: normal; }
+  .site-foot .fine { grid-column: 1 / -1; border-top: 1px solid #3a362e; padding-top: 1.25rem; color: #b7ae9c; font-size: .82rem; }
+  @media (max-width: 760px) { .site-foot .wrap { grid-template-columns: 1fr; } }
+  @media (max-width: 880px) { .site-foot .wrap { padding-bottom: 6.5rem; } } /* room for the mobile dock */
+
+  /* Mobile "share your feedback" dock ------------------------------------ */
+  .dock {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom));
+    background: rgba(246, 241, 230, .94); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--rule);
+    transform: translateY(110%); visibility: hidden;
+    transition: transform .25s ease, visibility 0s linear .25s;
+  }
+  .dock.show { transform: none; visibility: visible; transition: transform .25s ease; }
+  .dock .btn { width: 100%; }
+  @media (min-width: 881px) { .dock { display: none; } }
+
+  /* Bar Council of India disclaimer, as on the kalpalaw.in homepage */
+  .bci {
+    width: calc(100vw - 2rem); max-width: 640px; padding: 1.5rem 1.5rem 1.4rem;
+    background: var(--card); color: var(--ink);
+    border: 1px solid var(--rule); border-top: 4px solid var(--tape);
+  }
+  .bci::backdrop { background: var(--ink); }
+  .bci .mono-label { margin: 0 0 .8rem; color: var(--tape-deep); }
+  .bci p:not(.mono-label) { font: 400 .95rem/1.6 var(--sans); margin: 0 0 1.25rem; max-height: calc(100vh - 220px); overflow: auto; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+
+  @media print {
+    .template-bar, .skip, .masthead nav, .actions, .dock, .form-frame, .before { display: none !important; }
+    body { background: #fff; font-size: 11pt; }
+    .sec-respond { background: none; }
+    .sec-label { position: static; }
+    .form-fallback a::after { content: " (" attr(href) ")"; }
+    .reveal, .tape { animation: none; }
+  }
+</style>
+</head>
+
+<body>
+<dialog class="bci" id="bci" aria-labelledby="bci-h">
+  <p class="mono-label" id="bci-h">Disclaimer</p>
+  <p>The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website, www.kalpalaw.in, you acknowledge and confirm that you are seeking information relating to Kalpa Law of your own accord and that there has been no form of solicitation, advertisement or inducement by Kalpa Law or its members. The content of this website is for informational purposes only and should not be interpreted as soliciting or advertisement. No material/ information provided on this website should be construed as legal advice. Kalpa Law shall not be liable for consequences of any action taken by relying on the material/information provided on this website. The contents of this website are the intellectual property of Kalpa Law.</p>
+  <button class="btn btn-primary" type="button" autofocus>I AGREE</button>
+</dialog>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="template-bar" id="template-bar" role="status" hidden>
+  Template: <b>0</b> placeholders left to fill, highlighted in yellow. This bar disappears when all are replaced.
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">PIL</span>
+      <span>Satya Niketan PG Collapse PIL</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#issue">The issue</a>
+      <a href="#directions">Court's directions</a>
+      <a href="#case">Case details</a>
+      <a class="btn btn-primary btn-sm" href="#respond">Share your feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow mono-label reveal" style="--i:0">Public Interest Litigation · Before the Hon'ble High Court of Delhi</p>
+        <h1 id="hero-h" class="reveal" style="--i:1">Safe housing for Delhi's students, after the Satya Niketan PG hostel collapse</h1>
+        <p class="lede reveal" style="--i:2">This page summarises the Court's orders in this case so far, and invites your feedback on the PIL. The petition itself is not published here.</p>
+        <div class="actions reveal" style="--i:3">
+          <a class="btn btn-primary" id="hero-cta" href="#respond">Share your feedback <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#directions">What the Court has directed</a>
+        </div>
+      </div>
+
+      <div class="doc-stack reveal" style="--i:3">
+        <span class="tape" aria-hidden="true"></span>
+        <article class="doc" aria-label="Cause title of the petition">
+          <p class="doc-court">In the High Court of Delhi at New Delhi</p>
+          <p class="doc-no">W.P.(CRL) 2752/2026</p>
+          <p class="doc-matter">In the matter of:</p>
+          <div class="party"><span class="party-name">Aniket Kumar Gupta</span><span class="party-role">…Petitioner</span></div>
+          <p class="versus">Versus</p>
+          <div class="party"><span class="party-name">Govt. of NCT of Delhi &amp; Ors.</span><span class="party-role">…Respondents</span></div>
+          <p class="doc-foot">Public Interest Litigation · CNR No. DLHC010422072026</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="issue" aria-labelledby="issue-h">
+    <div class="wrap sec-grid">
+      <div class="sec-label mono-label"><span class="sec-no">§ 01</span><span>The issue</span></div>
+      <div>
+        <h2 id="issue-h">What this PIL is about</h2>
+        <div class="prose">
+          <p>On 6 September 2026, two buildings in Satya Niketan, Delhi, which were being run as a PG (paying guest) hostel for boys, collapsed. Around 50 students lived there. When the Court first heard this case the next day, at least 7 people had lost their lives. Many residents had been taken to hospital, and many others were believed to be still trapped under the debris.</p>
+          <p>The buildings housed students of colleges affiliated to the University of Delhi on its South Campus, many of whom had come from outside Delhi. In its order of 7 September 2026, the Court noted that the University does not provide enough hostel places for such students, so they and their parents are left to rely on PG hostels.</p>
+          <p>The Court said the incident raises deep concerns about three things: the shortage of hostels run by the University and the Government, the safety and security of students, and the inadequate measures taken by the Municipal Corporation of Delhi (MCD) and other authorities to regulate PG hostels. Its first view (<em>prima facie</em>, meaning before hearing all sides) was that responsibility for such incidents does not lie only with the owner of the PG hostel, but also with the University authorities and with the MCD, which must make sure that buildings follow the building bye-laws. The Court has not decided the case. It has asked the respondents (the government bodies and others the case is brought against) to reply.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="directions" aria-labelledby="directions-h">
+    <div class="wrap sec-grid">
+      <div class="sec-label mono-label"><span class="sec-no">§ 02</span><span>Directions</span></div>
+      <div>
+        <h2 id="directions-h">What the Court has directed so far</h2>
+        <p class="sec-intro">On 7 September 2026, the Court issued notice to the respondents, which means it formally asked them to answer the petition, and gave these directions:</p>
+        <ol class="lettered">
+          <li>Every respondent is to file its own reply to the petition, on affidavit (a written statement sworn to be true), within 10 days, that is, by 17 September 2026.</li>
+          <li>The MCD is to say whether any laws or official rules regulate PG hostels in Delhi.</li>
+          <li>The University of Delhi is to say how many students from outside Delhi take admission in its affiliated colleges, and how many hostels, with their capacities, are run by the University or the Government.</li>
+          <li>The MCD, at its highest executive level, is to hold an inquiry into whether the buildings that collapsed had valid permission. If they were built without it, or against the building bye-laws, the inquiry is to fix responsibility on the officers or employees concerned, and the MCD's reply is to say what action has been proposed against the officers or officials at fault, if there are any.</li>
+          <li>Within a week, that is, by 14 September 2026, the MCD is to inspect all PG hostels in its area and report whether their buildings have the required permissions and follow the bye-laws. Its reply is also to say how many students live in these PG hostels.</li>
+        </ol>
+        <p class="after-facts">The Court also recorded the assurance of the Solicitor General of India (the senior government lawyer appearing for the Union of India, Delhi Police and the MCD) that the rescue operation was in full swing, and said it hoped the authorities would double their efforts so that lives could be saved.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="case" aria-labelledby="case-h">
+    <div class="wrap sec-grid">
+      <div class="sec-label mono-label"><span class="sec-no">§ 03</span><span>Case details</span></div>
+      <div>
+        <h2 id="case-h">Case details</h2>
+        <dl class="facts">
+          <div><dt class="mono-label">Court</dt><dd>High Court of Delhi at New Delhi</dd></div>
+          <div><dt class="mono-label">Case number</dt><dd>W.P.(CRL) 2752/2026: writ petition number 2752 of 2026, filed on the Court's criminal side. It is a writ petition, not a criminal trial.<br><span class="mono-label">CNR No. DLHC010422072026</span></dd></div>
+          <div><dt class="mono-label">Petitioner</dt><dd>Aniket Kumar Gupta</dd></div>
+          <div><dt class="mono-label">Respondents</dt><dd>Govt. of NCT of Delhi and others, including the Municipal Corporation of Delhi (MCD) and the University of Delhi. At the first hearing, the Solicitor General of India appeared for the Union of India (the central government), Delhi Police and the MCD.</dd></div>
+          <div><dt class="mono-label">Bench</dt><dd>Hon'ble the Chief Justice Devendra Kumar Upadhyaya and Hon'ble Mr. Justice Tejas Karia</dd></div>
+          <div><dt class="mono-label">First hearing</dt><dd>7 September 2026. Notice issued to the respondents.</dd></div>
+          <div><dt class="mono-label">Current status</dt><dd>Pending. The respondents' replies were due by 17 September 2026 and the MCD's inspection by 14 September 2026. The orders published here do not say whether these were done. The case was listed for 25 September 2026.</dd></div>
+          <div class="facts-wide"><dt class="mono-label">Orders so far</dt><dd>
+            <a href="order_2026-09-07.pdf" target="_blank" rel="noopener">7 September 2026</a>: notice issued, and the directions above.<br>
+            <a href="order_2026-09-17.pdf" target="_blank" rel="noopener">17 September 2026</a>: the Court took up two applications by Dr. Kiran Bedi seeking to assist the Court, including a request to be made a party to the case. At the request of the Additional Solicitor General, appearing for the Central Government, the Delhi Government and the MCD, it gave 3 days to file objections, and said any response to them may be filed by the next date of hearing. The Court did not decide the applications that day.
+          </dd></div>
+        </dl>
+        <p class="after-facts">Dates can change. For the official, up-to-date status, search the case's CNR number, DLHC010422072026 (the unique number that identifies this case in India's online court records), on the <a href="https://hcservices.ecourts.gov.in/" target="_blank" rel="noopener">eCourts High Court services site</a> or the <a href="https://delhihighcourt.nic.in/" target="_blank" rel="noopener">Delhi High Court website</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM LINK: paste your Google Form link into data-form-url below. -->
+  <section class="sec sec-respond" id="respond" aria-labelledby="respond-h"
+           data-form-url="https://docs.google.com/forms/d/e/1FAIpQLSdnwm5SWdQh5Tw2vlY1lZdLQPMQA4BAAHEdn4RDeBWGEpsdWQ/viewform">
+    <div class="wrap sec-grid">
+      <div class="sec-label mono-label"><span class="sec-no">§ 04</span><span>Respond</span></div>
+      <div>
+        <h2 id="respond-h">Share your feedback</h2>
+        <p class="sec-intro">Share your feedback on this PIL. It takes about three minutes.</p>
+        <p class="not-a-vote">This is not a vote. The Court decides the case on the law and on the material the parties place before it, and it has not asked for public views. Whether any responses are placed before the Court is for the Court to decide.</p>
+
+        <div class="before">
+          <h3 class="mono-label">Before you start</h3>
+          <ul>
+            <li>You will be asked for your name, address, PIN code and mobile number. Your email address and the <strong>last 4 digits</strong> of your Aadhaar are optional.</li>
+            <li>You do not need to sign in to Google to respond.</li>
+            <li><strong>Never enter your full Aadhaar number</strong>, here or on any similar form.</li>
+            <li>Your feedback can be up to 1,500 characters (about 250 words). Please do not name or accuse any individual.</li>
+            <li>Please respond only once. If more than one response arrives with the same name, mobile number and email, only the first is counted. To correct your response, write to <a href="mailto:mail@kalpalaw.in">mail@kalpalaw.in</a> rather than filling in the form again.</li>
+            <li>At the end of the form you will be asked to tick a declaration. The <a href="#consent">consent note</a> below the form explains how your information is used.</li>
+          </ul>
+        </div>
+
+        <div class="form-frame" id="form-frame">
+          <p class="form-loading">Loading the form…</p>
+          <div class="form-setup" id="form-setup" hidden>
+            <p><strong>The response form is not connected yet.</strong></p>
+            <p>Site owner: paste your Google Form's link into <code>data-form-url</code> on the <code>#respond</code> section of <code>index.html</code>.</p>
+          </div>
+        </div>
+        <p class="form-fallback" id="form-fallback" hidden>Form not loading, or hard to use on your phone? <a id="form-direct" href="#respond" target="_blank" rel="noopener">Open the form in a new tab</a>.</p>
+
+        <aside class="consent-note" id="consent" aria-labelledby="consent-h">
+          <p class="mono-label" id="consent-h">Consent and use of your information</p>
+          <p>By submitting the form, you confirm that you are giving your information voluntarily and that it is true to the best of your knowledge. It is collected by Kalpa Law only to record public views on this petition, to remove duplicate responses and, if the Court permits, to place full responses before the Hon'ble High Court of Delhi. A full response includes everything you enter: your name, address, PIN code, mobile number, email and the last 4 digits of your Aadhaar (if given), and your feedback. Anything filed in Court is shared with the parties to the case. Your information is kept in the organiser's Google account and is not used for any other purpose. To correct or delete your response, or to withdraw your consent, write to <a href="mailto:mail@kalpalaw.in">mail@kalpalaw.in</a>. If your response has already been filed in Court, it becomes part of the court record, and deleting it here will not remove it from there.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">PIL</span><span>Satya Niketan PG Collapse PIL</span></a>
+      <section aria-labelledby="contact-h">
+        <p class="mono-label" id="contact-h">Contact Us</p>
+        <p><a href="tel:+919891758831">+91-9891758831</a><br><a href="mailto:mail@kalpalaw.in">mail@kalpalaw.in</a></p>
+        <div class="foot-addresses">
+          <address>259, Lawyers Chambers<br>Block 1, Delhi High Court<br>New Delhi – 110003</address>
+          <address>E-141, 1st Floor<br>Amar Colony<br>New Delhi – 110024</address>
+        </div>
+      </section>
+    </div>
+    <div>
+      <p>This page is not affiliated with, or endorsed by, the Hon'ble High Court of Delhi. It summarises the Court's orders in this case. The matter is pending before the Court, and nothing on this page is intended to prejudge its outcome.</p>
+    </div>
+    <p class="fine">Last updated 30 September 2026.</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn btn-primary" href="#respond">Share your feedback <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+
+<script>
+(function () {
+  // 0. Bar Council of India disclaimer. Like the kalpalaw.in homepage, it
+  //    appears on every visit and closes with "I AGREE".
+  var bci = document.getElementById('bci');
+  if (bci.showModal) {
+    bci.showModal();
+    bci.querySelector('button').addEventListener('click', function () { bci.close(); });
+  }
+
+  // 1. Count unfilled placeholders.
+  var todos = document.querySelectorAll('mark.todo');
+  var bar = document.getElementById('template-bar');
+  if (todos.length) {
+    bar.querySelector('b').textContent = todos.length;
+    bar.hidden = false;
+  }
+
+  // 2. Embed the Google Form from data-form-url. Accepts any link containing
+  //    /forms/d/e/<id>/ and rebuilds a clean embed URL from the id.
+  var respond = document.getElementById('respond');
+  var frame = document.getElementById('form-frame');
+  var match = (respond.getAttribute('data-form-url') || '').match(/docs\.google\.com\/forms\/d\/e\/([A-Za-z0-9_-]+)/);
+  if (match) {
+    var base = 'https://docs.google.com/forms/d/e/' + match[1] + '/viewform';
+    var iframe = document.createElement('iframe');
+    iframe.src = base + '?embedded=true';
+    iframe.title = 'Response form (Google Forms)';
+    iframe.loading = 'lazy';
+    iframe.addEventListener('load', function () { frame.classList.add('loaded'); });
+    frame.appendChild(iframe);
+    document.getElementById('form-direct').href = base;
+    document.getElementById('form-fallback').hidden = false;
+  } else {
+    frame.classList.add('empty');
+    document.getElementById('form-setup').hidden = false;
+  }
+
+  // 3. On phones, show a "Share your feedback" bar once the hero button has
+  //    scrolled away, and hide it while the form itself is on screen.
+  var dock = document.getElementById('dock');
+  var heroCta = document.getElementById('hero-cta');
+  if ('IntersectionObserver' in window) {
+    var visible = { hero: true, form: false };
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { visible[e.target === heroCta ? 'hero' : 'form'] = e.isIntersecting; });
+      dock.classList.toggle('show', !visible.hero && !visible.form);
+    });
+    io.observe(heroCta);
+    io.observe(respond);
+  }
+})();
+</script>
+</body>
+</html>
